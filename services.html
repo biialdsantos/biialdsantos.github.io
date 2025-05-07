@@ -1,0 +1,91 @@
+  <!-- Beatriz Santos | 3220659 | Portfolio | 3º 2024-2025 | 2º | Laboratório de Projeto II | Design Gráfico e Multimédia | Esad.cr | Professor Marco Heleno | 04-05-2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>services</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">beatriz santos</a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="work.html">work</a></li>
+        <li><a href="services.html" class="active">services</a></li>
+        <li><a href="contacts.html">contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Secção Título -->
+  <section class="intro">
+    <div class="intro-text container">
+      <h1>my_services</h1>
+    </div>
+  </section>
+
+  <!-- Secção Serviços -->
+  <section class="services">
+    <div class="services-grid">
+  
+      <div class="service-item">
+        <div class="icon">🧩</div>
+        <h3>ux/ui design</h3>
+        <p>creating intuitive and aesthetically pleasing interfaces for apps and websites.</p>
+      </div>
+  
+      <div class="service-item">
+        <div class="icon">📱</div>
+        <h3>social media design</h3>
+        <p>visual content tailored to boost engagement across social platforms.</p>
+      </div>
+  
+      <div class="service-item">
+        <div class="icon">🎟️</div>
+        <h3>event design</h3>
+        <p>branding and communication materials for events — digital or print.</p>
+      </div>
+
+      <div class="service-item">
+        <div class="icon">🎞️</div>
+        <h3>video editing</h3>
+        <p>story-driven, dynamic editing for social media, promos, and events.</p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- Barra preta -->
+  <div class="marquee-container marquee-spacing">
+    <div class="marquee">
+      get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp; get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp;
+      get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp; get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp;
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+  <a href="https://www.linkedin.com/in/beatriz-santos-501846316/" target="_blank" class="linkedin-fab" aria-label="LinkedIn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF6E0" viewBox="0 0 24 24">
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.3h.1c.7-1.2 2.3-2.5 4.8-2.5 5.1 0 6 3.4 6 7.8V24h-5v-7.2c0-1.7-.1-3.9-2.5-3.9-2.5 0-2.9 1.9-2.9 3.7V24h-5V8z"/>
+    </svg>
+  </a>
+  
+</body>
+</html>

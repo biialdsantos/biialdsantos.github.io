@@ -1,11 +1,136 @@
-<!DOCTYPE html>
+  <!-- Beatriz Santos | 3220659 | Portfolio | 3º 2024-2025 | 2º | Laboratório de Projeto II | Design Gráfico e Multimédia | Esad.cr | Professor Marco Heleno | 04-05-2025 -->
+
+  <!DOCTYPE html> 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>bia's portfolio</title>
+
+  <!-- Fonte IBM Plex Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Ola Mundo</h1>
+  <header>
+    <a href="index.html" class="logo">beatriz santos</a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="work.html">work</a></li>
+        <li><a href="services.html">services</a></li>
+        <li><a href="contacts.html">contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- Secção Hello -->
+  <section class="intro">
+    <div class="intro-text container">
+      <h1 id="typewriter"></h1>
+    </div>
+  </section>
+
+  <!-- Secção My Work -->
+  <section class="work">
+    <h2>my_<strong>work</strong></h2>
+    <div class="work-grid">
+      <div class="work-item">
+        <a href="otzi.html">
+          <img src="images/otzi-app.jpg" alt="otzi app" />
+        </a>
+        <h3>otzi app</h3>
+        <p>ux/ui design</p>
+      </div>
+      <div class="work-item">
+        <a href="ribeiroemarques.html">
+          <img src="images/ribeiroemarques_principal.jpg" alt="ribeiro & marques website" />
+        </a>
+        <h3>ribeiro & marques website</h3>
+        <p>ux/ui design</p>
+      </div>
+      <div class="work-item">
+        <a href="conferenceinovarnorte.html">
+          <img src="images/conference_inovarnorte.png" alt="conference inovar+2.0 norte" />
+        </a>
+        <h3>conference inovar+2.0 norte</h3>
+        <p>event design</p>
+      </div>
+      <div class="work-item">
+        <a href="esadeventos.html">
+          <img src="images/esadcreventos_principal.png" alt="eventos esad cr app" />
+        </a>
+        <h3>eventos esad cr app</h3>
+        <p>ux/ui design</p>
+      </div>
+    
+    </div>
+  </section>
+
+  <!-- Botão see_more -->
+  <div class="see-more">
+    <a href="work.html">see_more</a>
+  </div>
+
+  <!-- Barra preta com texto em movimento -->
+  <div class="marquee-container marquee-spacing">
+    <div class="marquee">
+    get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp; get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp;
+    get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp; get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp;
+    get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp; get in touch &nbsp; beatrizlazarosantoswork@gmail.com &nbsp;
+  </div>
+</div>
+
+<script>
+  const element = document.getElementById("typewriter");
+  const text = "hello_i’m_beatriz. a designer specializing in UX/UI and social media.";
+  let index = 0;
+  let typing = true;
+
+  function typeLoop() {
+    if (typing) {
+      if (index < text.length) {
+        element.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeLoop, 60);
+      } else {
+        typing = false;
+        setTimeout(typeLoop, 3000); // espera 5 segundos antes de apagar
+      }
+    } else {
+      if (index > 0) {
+        element.innerHTML = text.substring(0, index - 1);
+        index--;
+        setTimeout(typeLoop, 30);
+      } else {
+        typing = true;
+        setTimeout(typeLoop, 500);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeLoop);
+</script>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  toggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+<a href="https://www.linkedin.com/in/beatriz-santos-501846316/" target="_blank" class="linkedin-fab" aria-label="LinkedIn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF6E0" viewBox="0 0 24 24">
+    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.3h.1c.7-1.2 2.3-2.5 4.8-2.5 5.1 0 6 3.4 6 7.8V24h-5v-7.2c0-1.7-.1-3.9-2.5-3.9-2.5 0-2.9 1.9-2.9 3.7V24h-5V8z"/>
+  </svg>
+</a>
+
 </body>
 </html>
+

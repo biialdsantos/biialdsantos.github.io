@@ -1,0 +1,480 @@
+/* Beatriz Santos | 3220659 | Portfolio | 3º 2024-2025 | 2º | Laboratório de Projeto II | Design Gráfico e Multimédia | Esad.cr | Professor Marco Heleno | 04-05-2025 */
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #FFF6E0; /* nova cor de fundo */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+  
+  /* Logo */
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Navegação */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* Secção Intro (hello_i’m_beatriz.) */
+  .intro {
+    padding: 6rem 2rem;
+    margin: 2rem 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+  
+  .intro-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .intro-text h1 {
+    font-size: 2rem;
+    margin: 0;
+  }  
+  
+  .intro-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }  
+
+  .intro-text p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  
+  strong {
+    font-weight: 600;
+  }  
+
+  /* Secção My Work */
+.work {
+  max-width: 1200px;
+  margin: 2px auto;
+  padding: 0 2rem;
+}
+
+.work h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+  gap: 2rem;
+}
+
+.work-item {
+  border: 1px solid #000;
+  padding: 1rem;
+  text-align: center;
+  background-color: #FFF6E0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicialmente */
+}
+
+.work-item:hover {
+  transform: translateY(-6px); /* eleva um pouco a box */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* sombra leve e elegante */
+}
+
+.work-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #000000;
+  margin-bottom: 1rem;
+}
+
+.work-item h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.work-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+.see-more {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.see-more a {
+  background-color: #000;
+  color: #FFF6E0;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.see-more a:hover {
+  background-color: #333;
+}
+
+.marquee-container {
+  background-color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.marquee-spacing {
+  margin-top: 4rem; /* espaçamento padrão antes da barra preta */
+}
+.marquee {
+  display: inline-block;
+  color: #FFF6E0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  animation: scroll-left 30s linear infinite; /* ← mudou de 15s para 30s */
+  padding-left: 100%;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.intro-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.about-content {
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center; /* ← Isto centraliza verticalmente */
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+/* Menu base */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Menu Responsivo */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    text-align: right;
+    padding: 1rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    color: #FFF6E0;
+    font-weight: 600;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+.services {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  border: 1px solid #000;
+  padding: 2rem;
+  background-color: #FFF6E0;
+}
+
+.service-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+
+  .service-item .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+}
+.service-item {
+  border: 1px solid #000;
+  padding: 2rem;
+  background-color: #FFF6E0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-item h3,
+.service-item p {
+  transition: color 0.3s ease;
+}
+
+.service-item:hover {
+  background-color: #000;
+  color: #FFF6E0;
+}
+
+.service-item:hover h3,
+.service-item:hover p,
+.service-item:hover .icon {
+  color: #FFF6E0;
+}
+
+/* ← Isto alinha o texto inicial com o resto do conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.linkedin-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.linkedin-fab:hover {
+  background-color: #333;
+}
+
+.linkedin-fab svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #000;
+  margin: 4rem 0;
+}
+
+/* para as imagens da conferencia fiquem todas do mesmo tamanho */
+.project-image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.project-image-gallery img {
+  width: 100%;
+  height: 700px; /* força a altura igual para todas */
+  object-fit: cover; /* corta a imagem para caber sem distorção */
+  border: 1px solid #000;
+  display: block;
+}
+
+/* é para a página de contactos */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-item {
+  border: 1px solid #000;
+  padding: 2rem 1.5rem; /* padding uniforme e mais espaçado nas laterais */
+  background-color: #FFF6E0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%; /* garante que todos tenham a mesma altura */
+}
+
+
+.service-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.service-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+}
+
+.service-item p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.service-item a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.service-item:hover {
+  background-color: #000;
+  color: #FFF6E0;
+}
+
+.service-item:hover a,
+.service-item:hover .icon {
+  color: #FFF6E0;
+}
+.service-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.service-item h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.service-item a {
+  color: inherit;
+  text-decoration: underline;
+  word-break: break-word;
+  font-size: 0.9rem; /* ← ajusta aqui o tamanho do texto do link */
+}
+
+.logo {
+  color: #000; /* cor escura */
+  text-decoration: none; /* remove sublinhado */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
