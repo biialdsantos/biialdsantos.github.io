@@ -11,6 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
+<!-- Container oculto para o botão -->
+<div id="email_container" style="display: none;"></div>
+
+<!-- p5.js + script externo -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<script src="copy-email.js"></script>
+
 <body>
   <header>
     <a href="index.html" class="logo">beatriz santos</a>
@@ -21,7 +28,7 @@
         <li><a href="about.html">about</a></li>
         <li><a href="work.html">work</a></li>
         <li><a href="services.html" class="active">services</a></li>
-        <li><a href="contacts.html">contacts</a></li>
+        <li><a href="#" id="email">contacts</a></li>
       </ul>
     </nav>
   </header>

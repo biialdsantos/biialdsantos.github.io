@@ -1,233 +1,28 @@
 /* Beatriz Santos | 3220659 | Portfolio | 3º 2024-2025 | 2º | Laboratório de Projeto II | Design Gráfico e Multimédia | Esad.cr | Professor Marco Heleno | 04-05-2025 */
 
-
+/* ------------------------------ BASE GLOBAL ------------------------------ */
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'IBM Plex Mono', monospace;
-    background-color: #FFF6E0; /* nova cor de fundo */
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-  
-  /* Logo */
-  .logo {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  
-  /* Navegação */
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 400;
-    padding: 0.3rem 0.6rem;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  nav ul li a:hover,
-  nav ul li a.active {
-    background-color: #000;
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  /* Secção Intro (hello_i’m_beatriz.) */
-  .intro {
-    padding: 6rem 2rem;
-    margin: 2rem 0;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-  }
-  
-  .intro-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .intro-text h1 {
-    font-size: 2rem;
-    margin: 0;
-  }  
-  
-  .intro-text {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }  
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #FFF6E0; /* Cor de fundo creme */
+  margin: 0;
+  padding: 0;
+}
 
-  .intro-text p {
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
-  }
-  
-  strong {
-    font-weight: 600;
-  }  
+strong {
+  font-weight: 600;
+}
 
-  /* Secção My Work */
-.work {
+.container {
   max-width: 1200px;
-  margin: 2px auto;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
-.work h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
-  gap: 2rem;
-}
-
-.work-item {
-  border: 1px solid #000;
-  padding: 1rem;
-  text-align: center;
-  background-color: #FFF6E0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicialmente */
-}
-
-.work-item:hover {
-  transform: translateY(-6px); /* eleva um pouco a box */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* sombra leve e elegante */
-}
-
-.work-item img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-  border: 1px solid #000000;
-  margin-bottom: 1rem;
-}
-
-.work-item h3 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 0.3rem;
-}
-
-.work-item p {
-  margin: 0;
-  font-size: 1rem;
-}
-.see-more {
-  text-align: center;
-  margin: 3rem 0;
-}
-
-.see-more a {
-  background-color: #000;
-  color: #FFF6E0;
-  text-decoration: none;
-  padding: 0.5rem 1.5rem;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 600;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
-
-.see-more a:hover {
-  background-color: #333;
-}
-
-.marquee-container {
-  background-color: #000;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  padding: 1rem 0;
-}
-
-.marquee-spacing {
-  margin-top: 4rem; /* espaçamento padrão antes da barra preta */
-}
-.marquee {
-  display: inline-block;
-  color: #FFF6E0;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 1rem;
-  animation: scroll-left 30s linear infinite; /* ← mudou de 15s para 30s */
-  padding-left: 100%;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.intro-text h1 {
-  font-size: 40px;
-  margin: 0;
-}
-
-.about-content {
-  padding: 4rem 2rem;
-}
-
-.about-container {
-  display: flex;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  align-items: center; /* ← Isto centraliza verticalmente */
-  flex-wrap: wrap;
-}
-
-.about-image img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border: 1px solid #000;
-}
-
-.about-text {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.about-text p {
-  margin-bottom: 1.5rem;
-}
-/* Menu base */
+/* ------------------------------ HEADER E NAVEGAÇÃO ------------------------------ */
 header {
   display: flex;
   justify-content: space-between;
@@ -237,13 +32,44 @@ header {
   position: relative;
 }
 
+.logo {
+  color: #000; /* Mantém a cor escura mesmo sendo link */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Menu Responsivo */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ------------------------------ MENU RESPONSIVO ------------------------------ */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -281,51 +107,172 @@ header {
     color: #fff;
   }
 }
+
+/* ------------------------------ SECÇÃO INTRO ------------------------------ */
+.intro {
+  padding: 6rem 2rem;
+  margin-bottom: 30px; /* controla o espaçamento depois da linha */
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.intro-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.intro-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.intro-text p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* ------------------------------ SECÇÃO ABOUT ------------------------------ */
+.about-content {
+  margin: 30px auto 0 auto;
+  padding: 0 2rem;
+}
+
+.about-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------ SECÇÃO WORK ------------------------------ */
+.work {
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  padding: 0 2rem;
+}
+
+.work h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.work-item {
+  border: 1px solid #000;
+  padding: 1rem;
+  text-align: center;
+  background-color: #FFF6E0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.work-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.work-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+}
+
+.work-item h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.work-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ------------------------------ BARRA PRETA COM TEXTO EM MOVIMENTO ------------------------------ */
+.marquee-container {
+  background-color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.marquee-spacing {
+  margin-top: 4rem;
+}
+
+.marquee {
+  display: inline-block;
+  color: #FFF6E0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  animation: scroll-left 30s linear infinite;
+  padding-left: 100%;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ------------------------------ SECÇÃO CONTACTOS ------------------------------ */
 .services {
   max-width: 1200px;
-  margin: 4rem auto;
+  margin: 30px auto;
   padding: 0 2rem;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* força 4 colunas */
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .service-item {
   border: 1px solid #000;
-  padding: 2rem;
-  background-color: #FFF6E0;
-}
-
-.service-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  text-transform: lowercase;
-}
-
-.service-item p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-
-  .service-item .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    transition: color 0.3s ease;
-  }
-}
-.service-item {
-  border: 1px solid #000;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   background-color: #FFF6E0;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.service-item h3,
-.service-item p {
-  transition: color 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
 }
 
 .service-item:hover {
@@ -333,19 +280,43 @@ header {
   color: #FFF6E0;
 }
 
-.service-item:hover h3,
-.service-item:hover p,
+.service-item:hover a,
 .service-item:hover .icon {
   color: #FFF6E0;
 }
 
-/* ← Isto alinha o texto inicial com o resto do conteúdo */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.service-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
 }
 
+.service-item h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.service-item a {
+  color: inherit;
+  text-decoration: underline;
+  word-break: break-word;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ------------------------------ ÍCONE FLUTUANTE DO LINKEDIN ------------------------------ */
 .linkedin-fab {
   position: fixed;
   bottom: 20px;
@@ -370,111 +341,79 @@ header {
   width: 24px;
   height: 24px;
 }
+
+/* ------------------------------ DETALHES DO PROJETO (EX. RIBEIRO & MARQUES) ------------------------------ */
 .project-image img {
   width: 100%;
   height: auto;
   display: block;
   border: 1px solid #000;
-  margin: 4rem 0;
+  margin-top: 2rem;
 }
 
-/* para as imagens da conferencia fiquem todas do mesmo tamanho */
-.project-image-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
+.project-details {
+  padding: 4rem 0;
 }
 
-.project-image-gallery img {
-  width: 100%;
-  height: 700px; /* força a altura igual para todas */
-  object-fit: cover; /* corta a imagem para caber sem distorção */
-  border: 1px solid #000;
-  display: block;
-}
-
-/* é para a página de contactos */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.service-item {
-  border: 1px solid #000;
-  padding: 2rem 1.5rem; /* padding uniforme e mais espaçado nas laterais */
-  background-color: #FFF6E0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
+.text-columns {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  height: 100%; /* garante que todos tenham a mesma altura */
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha os topos */
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
+.left-column,
+.right-column {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
 
-.service-item .icon {
-  font-size: 2.5rem;
+.right-column {
+  flex: 0 0 40%;
+  max-width: 40%;
+  margin-top: 2.4rem; /* alinhamento fino com o início do parágrafo da esquerda */
+}
+
+.left-column h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  transition: color 0.3s ease;
 }
 
-.service-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  text-transform: lowercase;
-}
-
-.service-item p {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.service-item a {
-  color: #000;
-  text-decoration: underline;
-}
-
-.service-item:hover {
-  background-color: #000;
-  color: #FFF6E0;
-}
-
-.service-item:hover a,
-.service-item:hover .icon {
-  color: #FFF6E0;
-}
-.service-item .icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.service-item h3 {
-  font-size: 1.25rem;
-  margin: 0;
-  text-transform: lowercase;
-}
-
-.service-item p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.service-item a {
-  color: inherit;
-  text-decoration: underline;
-  word-break: break-word;
-  font-size: 0.9rem; /* ← ajusta aqui o tamanho do texto do link */
-}
-
-.logo {
-  color: #000; /* cor escura */
-  text-decoration: none; /* remove sublinhado */
+.right-column h3 {
   font-size: 1.2rem;
-  font-weight: 600;
+  margin-top: 0;
 }
+
+.left-column h2,
+.right-column h3 {
+  margin-top: 0;
+}
+
+.tools-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tools-icons img {
+  width: 50px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.project-image-center {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.project-image-center img {
+  max-width: 100%;
+  width: 1130px;
+  display: block;
+  margin: 0 auto;
+}
+
