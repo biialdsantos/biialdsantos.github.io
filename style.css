@@ -527,7 +527,7 @@ nav ul li a.active {
   height: auto;
   display: block;
   border: 1px solid #000;
-  border-radius: 50px; /* ← Exemplo: arredondamento diferente para o vídeo */
+  border-radius: 90px; /* ← Exemplo: arredondamento diferente para o vídeo */
 }
 
 /* Estilo da IMAGEM */
