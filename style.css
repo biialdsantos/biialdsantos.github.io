@@ -182,6 +182,7 @@ nav ul li a.active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  margin-bottom: 30px;
 }
 
 .work-item {
@@ -221,17 +222,15 @@ nav ul li a.active {
 .marquee-container {
   background-color: #000;
   overflow: hidden;
-  white-space: nowrap;
   width: 100%;
   padding: 1rem 0;
-}
-
-.marquee-spacing {
-  margin-top: 4rem;
+  margin: 0;
+  position: relative;
 }
 
 .marquee {
   display: inline-block;
+  white-space: nowrap;
   color: #FFF6E0;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
@@ -246,6 +245,10 @@ nav ul li a.active {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.marquee-container {
+  margin-top: 0 !important;
 }
 
 /* ------------------------------ SECÇÃO SERVICES ------------------------------ */
@@ -340,13 +343,11 @@ nav ul li a.active {
   width: 24px;
   height: 24px;
 }
-
 /* ------------------------------ DETALHES DO PROJETO ------------------------------ */
 .project-image img {
   width: 100%;
   height: auto;
   display: block;
-  border: 1px solid #000;
   margin-top: 2rem;
 }
 
@@ -404,7 +405,6 @@ nav ul li a.active {
 .project-image-center img {
   width: 100%;
   max-width: 1130px;
-  border: 1px solid #000;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -527,7 +527,7 @@ nav ul li a.active {
   height: auto;
   display: block;
   border: 1px solid #000;
-  border-radius: 90px; /* ← Exemplo: arredondamento diferente para o vídeo */
+  border-radius: 50px; /* ← Exemplo: arredondamento diferente para o vídeo */
 }
 
 /* Estilo da IMAGEM */
@@ -588,7 +588,6 @@ nav ul li a.active {
   z-index: 2;
   display: block;
 }
-
 /* Responsivo: reduz o vídeo e ajusta a posição */
 @media (max-width: 768px) {
   .workshop-overlay-video {
@@ -604,7 +603,6 @@ nav ul li a.active {
     align-items: center;
   }
 }
-
 /* ------------------- BOTÕES PERSONALIZADOS OTZI ------------------- */
 .otzi-buttons {
   display: flex;
@@ -713,7 +711,6 @@ nav ul li a.active {
 }
 
 /* ------------------------------ OTZI LAYOUT MEDIA ------------------------------ */
-
 .otzi-layout {
   display: flex;
   justify-content: center;
@@ -735,8 +732,9 @@ nav ul li a.active {
   width: 100%;
   height: auto;
   display: block;
-  border: 1px solid #000;
-  border-radius: 20px;
+  border: 1px solid #000;      /* ← garante a border */
+  border-radius: 50px;         /* ← valor fixo que não altera com o ecrã */
+  margin: 0 auto;              /* ← centra horizontalmente */
 }
 
 /* Responsivo */
