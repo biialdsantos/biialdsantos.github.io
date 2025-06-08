@@ -7,7 +7,7 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace;
-  background-color: #FFF6E0; /* Cor de fundo creme */
+  background-color: #FFF6E0;
   margin: 0;
   padding: 0;
 }
@@ -33,7 +33,7 @@ header {
 }
 
 .logo {
-  color: #000; /* Mantém a cor escura mesmo sendo link */
+  color: #000;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
@@ -111,7 +111,7 @@ nav ul li a.active {
 /* ------------------------------ SECÇÃO INTRO ------------------------------ */
 .intro {
   padding: 6rem 2rem;
-  margin-bottom: 30px; /* controla o espaçamento depois da linha */
+  margin-bottom: 30px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
@@ -248,7 +248,7 @@ nav ul li a.active {
   }
 }
 
-/* ------------------------------ SECÇÃO CONTACTOS ------------------------------ */
+/* ------------------------------ SECÇÃO SERVICES ------------------------------ */
 .services {
   max-width: 1200px;
   margin: 30px auto;
@@ -257,7 +257,7 @@ nav ul li a.active {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* força 4 colunas */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -315,8 +315,7 @@ nav ul li a.active {
   }
 }
 
-
-/* ------------------------------ ÍCONE FLUTUANTE DO LINKEDIN ------------------------------ */
+/* ------------------------------ ÍCONE LINKEDIN FLUTUANTE ------------------------------ */
 .linkedin-fab {
   position: fixed;
   bottom: 20px;
@@ -342,7 +341,7 @@ nav ul li a.active {
   height: 24px;
 }
 
-/* ------------------------------ DETALHES DO PROJETO (EX. RIBEIRO & MARQUES) ------------------------------ */
+/* ------------------------------ DETALHES DO PROJETO ------------------------------ */
 .project-image img {
   width: 100%;
   height: auto;
@@ -358,7 +357,7 @@ nav ul li a.active {
 .text-columns {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Alinha os topos */
+  align-items: flex-start;
   gap: 4rem;
   flex-wrap: wrap;
 }
@@ -370,9 +369,7 @@ nav ul li a.active {
 }
 
 .right-column {
-  flex: 0 0 40%;
-  max-width: 40%;
-  margin-top: 2.4rem; /* alinhamento fino com o início do parágrafo da esquerda */
+  margin-top: 2.4rem;
 }
 
 .left-column h2 {
@@ -385,16 +382,10 @@ nav ul li a.active {
   margin-top: 0;
 }
 
-.left-column h2,
-.right-column h3 {
-  margin-top: 0;
-}
-
 .tools-icons {
   margin-top: 2rem;
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -411,9 +402,351 @@ nav ul li a.active {
 }
 
 .project-image-center img {
-  max-width: 100%;
-  width: 1130px;
+  width: 100%;
+  max-width: 1130px;
+  border: 1px solid #000;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .project-image-center img {
+    max-width: 350px;
+  }
+}
+
+/* ------------------------------ IMAGENS EM DUAS COLUNAS ------------------------------ */
+.two-column-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 9.6rem;
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.image-left img {
+  width: 280px;
+  display: block;
+  height: auto;
+}
+
+.image-right img {
+  width: 700px;
+  display: block;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .two-column-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-left img,
+  .image-right img {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-column-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .two-column-images img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+/* ------------ RESPONSIVE GLOBAL FIXES ------------ */
+@media (max-width: 1024px) {
+  h1, h2, h3 {
+    font-size: 90%;
+  }
+
+  .container,
+  .intro,
+  .project-details {
+    padding: 0 1rem;
+  }
+
+  .work-grid,
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .linkedin-fab {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* ------------ PROJETO EVENTOS ESAD CR ------------ */
+
+/* -- VIDEO + IMAGEM LADO A LADO -- */
+
+.esadcr-layout {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+}
+
+.video-container,
+.image-container {
+  flex: 1 1 45%;
+}
+
+/* Estilo do VÍDEO */
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 90px; /* ← Exemplo: arredondamento diferente para o vídeo */
+}
+
+/* Estilo da IMAGEM */
+.image-container img.esad-img {
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 20px; /* ← Exemplo: diferente do vídeo */
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .esad-img {
+    max-width: 350px;
+  }
+}
+
+/* Layout geral: centra a imagem e posiciona o vídeo fora */
+.esadcr-workshop-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  position: relative;
+  max-width: 1200px;
+}
+
+/* Container da imagem */
+.workshop-image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 470px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.workshop-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Vídeo flutuante posicionado fora do lado direito da imagem */
+.workshop-overlay-video {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translateY(-50%) translateX(10%);
+  width: 280px;
+  max-width: 90vw;
+  border: 1px solid #000;
+  border-radius: 50px;
+  z-index: 2;
+  display: block;
+}
+
+/* Responsivo: reduz o vídeo e ajusta a posição */
+@media (max-width: 768px) {
+  .workshop-overlay-video {
+    position: static;
+    margin-top: 2rem;
+    transform: none;
+    width: 80%;
+    border-radius: 50px;
+  }
+
+  .esadcr-workshop-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ------------------- BOTÕES PERSONALIZADOS OTZI ------------------- */
+.otzi-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.otzi-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #FFF6E0;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  border: 1px solid #000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.otzi-btn:hover {
+  background-color: #FFF6E0;
+  color: #000;
+}
+.otzi-buttons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.otzi-btn-vertical {
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #FFF6E0;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  border: 1px solid #000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: fit-content;
+}
+
+.otzi-btn-vertical:hover {
+  background-color: #FFF6E0;
+  color: #000;
+}
+
+.otzi-buttons-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.otzi-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #FFF6E0;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.otzi-btn:hover {
+  background-color: #FFF6E0;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.tools-and-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.otzi-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.otzi-btn {
+  padding: 0.6rem 1.4rem;
+  background-color: #000;
+  color: #FFF6E0;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.otzi-btn:hover {
+  background-color: #FFF6E0;
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* ------------------------------ OTZI LAYOUT MEDIA ------------------------------ */
+
+.otzi-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.otzi-media {
+  flex: 1 1 45%;
+  max-width: 500px;
+}
+
+.otzi-media video,
+.otzi-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .otzi-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .otzi-media {
+    max-width: 90%;
+  }
+}
